@@ -1,0 +1,12 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(move /Y App_new.tsx App.tsx)",
+      "Bash(git init:*)",
+      "Bash(git remote add:*)",
+      "Bash(git add:*)"
+    ],
+    "deny": [],
+    "ask": []
+  }
+}

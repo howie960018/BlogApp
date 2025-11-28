@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>手繪風手帳 Doodle Journal</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Patrick+Hand&family=Noto+Sans+TC:wght@400;700&display=swap" rel="stylesheet">
+    <script>
+      tailwind.config = {
+        darkMode: 'class',
+        theme: {
+          extend: {
+            fontFamily: {
+              hand: ['"Patrick Hand"', '"Noto Sans TC"', 'cursive'],
+              sans: ['"Noto Sans TC"', 'sans-serif'], 
+            },
+            colors: {
+              paper: '#fdfbf7',
+              ink: '#1c1917',
+              chalkboard: '#262626',
+              chalk: '#f5f5f5',
+              pencil: {
+                red: '#fca5a5',
+                blue: '#93c5fd',
+                green: '#86efac',
+                yellow: '#fde047',
+                purple: '#d8b4fe',
+              }
+            },
+            boxShadow: {
+              sketch: '3px 3px 0px 0px currentColor',
+              'sketch-hover': '5px 5px 0px 0px currentColor',
+              'sketch-active': '1px 1px 0px 0px currentColor',
+            }
+          }
+        }
+      }
+    </script>
+    <style>
+      body {
+        transition: background-color 0.3s ease, color 0.3s ease;
+      }
+      body.light {
+        background-color: #fdfbf7;
+        color: #1c1917;
+        background-image: radial-gradient(#e5e5e5 1px, transparent 1px);
+        background-size: 20px 20px;
+      }
+      body.dark {
+        background-color: #262626;
+        color: #f5f5f5;
+        background-image: radial-gradient(#404040 1px, transparent 1px);
+        background-size: 20px 20px;
+      }
+      /* Custom scrollbar to match the theme */
+      ::-webkit-scrollbar {
+        width: 10px;
+      }
+      ::-webkit-scrollbar-track {
+        background: transparent; 
+      }
+      ::-webkit-scrollbar-thumb {
+        background: currentColor; 
+        opacity: 0.5;
+        border-radius: 5px;
+        border: 2px solid transparent;
+        background-clip: content-box;
+      }
+    </style>
+  <script type="importmap">
+{
+  "imports": {
+    "@google/genai": "https://aistudiocdn.com/@google/genai@^1.30.0",
+    "react-markdown": "https://aistudiocdn.com/react-markdown@^10.1.0",
+    "lucide-react": "https://aistudiocdn.com/lucide-react@^0.555.0",
+    "date-fns": "https://aistudiocdn.com/date-fns@^4.1.0",
+    "react-dom/": "https://aistudiocdn.com/react-dom@^19.2.0/",
+    "react-router-dom": "https://aistudiocdn.com/react-router-dom@^7.9.6",
+    "react/": "https://aistudiocdn.com/react@^19.2.0/",
+    "react": "https://aistudiocdn.com/react@^19.2.0"
+  }
+}
+</script>
+<link rel="stylesheet" href="/index.css">
+</head>
+  <body class="light">
+    <div id="root"></div>
+  <script type="module" src="/index.tsx"></script>
+</body>
+</html>

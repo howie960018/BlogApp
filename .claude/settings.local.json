@@ -4,7 +4,9 @@
       "Bash(move /Y App_new.tsx App.tsx)",
       "Bash(git init:*)",
       "Bash(git remote add:*)",
-      "Bash(git add:*)"
+      "Bash(git add:*)",
+      "Bash(git commit -m \"$(cat <<''EOF''\nInitial commit: Blog app with mood tracking and AI features\n\nThis is a full-stack blog application with the following features:\n- User authentication and authorization\n- Post creation with mood tracking\n- AI-powered content generation using Gemini\n- Comment system\n- Reminder notifications\n- Calendar view\n- Advanced filtering and search\n- Share functionality\n\n🤖 Generated with [Claude Code](https://claude.com/claude-code)\n\nCo-Authored-By: Claude <noreply@anthropic.com>\nEOF\n)\")",
+      "Bash(git push:*)"
     ],
     "deny": [],
     "ask": []
